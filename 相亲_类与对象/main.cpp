@@ -3,26 +3,28 @@
 #include <vector>
 #include "Boy.h"
 #include "Girl.h"
-
-void autopair( vector<Boy>&boys,vector<Girl>&girls);//自动匹配
+#include "DATABS.h"
 
 int main(void) {
-	vector<Boy>boys;
-	vector<Girl>girls;
-	Boy::inputBoys(boys);
-	Girl::inputGirl(girls);
+	DATABS T1;
+	T1.inti();
+	T1.print();
+	T1.autopair();
+	T1.Greatpair();
 
-	autopair(boys, girls);
+	/*Boy k;
+	k.inputboy(k);
+	T1.addOne(k);*/
 
 	system("pause");
 }
-
-void autopair(vector<Boy>& boys,vector<Girl>& girls){
-	for (int i = 0; i < boys.size(); i++) {
-		for (int k = 0; k < girls.size(); k++) {
-			if (boys[i].attitude(girls[k]) && girls[k].attitude(boys[i])) {
-				cout << boys[i].print() << ",和  " << girls[k].print() << "   可以匹配!" << endl;
-			}
-		}
-	}
-}
+/*
+20 紫霞 90
+18 如花 80
+30 小美 98
+0
+25 小王 30000
+20 小龙 8000
+18 小胖 6000
+0
+*/
